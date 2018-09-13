@@ -173,7 +173,7 @@
         mvPopMatrix()
         mat4.translate(mvMatrix, mvMatrix, [3.0, 0.0, 0.0])
         mvPushMatrix()
-        mat4.rotate(mvMatrix, mvMatrix, glMatrix.toRadian(rSquare), [1.0, 0.0, 0.0])
+        mat4.rotate(mvMatrix, mvMatrix, glMatrix.toRadian(rSquare), [0.0, 1.0, 0.0])
         //mat4.rotateX(mvMatrix, mvMatrix, glMatrix.toRadian(rSquare))
         gl.bindBuffer(gl.ARRAY_BUFFER, squareVertexPositionBuffer)
         gl.vertexAttribPointer(shaderProgram.vertexPositionAttribute, squareVertexPositionBuffer.itemSize, gl.FLOAT, false, 0, 0)
