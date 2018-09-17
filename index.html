@@ -140,7 +140,11 @@
         // Triangle Color
         triangleVertexColorBuffer = gl.createBuffer()
         gl.bindBuffer(gl.ARRAY_BUFFER, triangleVertexColorBuffer)
-        var colors = [
+        var colors = [];
+        for (var i=0; i < 16; i++) {
+            colors = colors.concat([0.5, 0.5, 1.0, 1.0]);
+        }
+        /*colors = [
           1.0, 0.0, 0.0, 1.0,
           0.0, 1.0, 0.0, 1.0,
           0.0, 0.0, 1.0, 1.0,
@@ -157,7 +161,7 @@
           0.0, 1.0, 0.0, 1.0,
           0.0, 0.0, 1.0, 1.0,
           0.0, 1.0, 0.0, 1.0
-        ]
+        ]*/
         gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(colors), gl.STATIC_DRAW)
         triangleVertexColorBuffer.itemSize = 4
         triangleVertexColorBuffer.numItems = 3
